@@ -66,7 +66,7 @@ jobs:
             asset_name: macos
     steps:
       - name: Download ${{ matrix.asset_name }}
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{ matrix.asset_name }}
       - name: Checkout testfiles
@@ -99,7 +99,7 @@ jobs:
             artifact_name: floss
     steps:
       - name: Download ${{ matrix.asset_name }}
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{ matrix.asset_name }}
       - name: Set executable flag
